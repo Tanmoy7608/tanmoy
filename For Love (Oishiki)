@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Debadwati's Love Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oishiki's Love Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -57,7 +58,7 @@
             font-size: 100px;
             margin: 20px 0;
             cursor: pointer;
-            transition: all 0.5s ease;
+            transition: transform 0.5s ease, filter 0.3s ease;
             display: inline-block;
             position: relative;
         }
@@ -127,9 +128,9 @@
 <body>
     <div id="particles-js"></div>
     <div class="container">
-        <h1 id="greeting">Hello, Debadwati!</h1>
+        <h1 id="greeting">Hello, Oishiki! 💕</h1>
         <div id="heart" onclick="showLoveMessage()">❤️</div>
-        <p id="message">You are my everything</p>
+        <p id="message">You are my world, my everything</p>
 
         <div class="language-buttons">
             <button onclick="changeLanguage('en')">English</button>
@@ -147,10 +148,10 @@
                 number: { value: 80, density: { enable: true, value_area: 800 } },
                 color: { value: '#ffffff' },
                 shape: { type: 'circle' },
-                opacity: { value: 0.5, random: false },
+                opacity: { value: 0.5 },
                 size: { value: 3, random: true },
                 line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 3, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+                move: { enable: true, speed: 3, out_mode: 'out' }
             },
             interactivity: {
                 detect_on: 'canvas',
@@ -163,15 +164,15 @@
         // Language Messages
         const messages = {
             en: {
-                greeting: "Hello, Debadwati! 💕",
+                greeting: "Hello, Oishiki! 💕",
                 message: "You are my world, my everything"
             },
             hi: {
-                greeting: "नमस्ते, देबद्वती! 💖",
+                greeting: "नमस्ते, ऐश्विकी! 💖",
                 message: "तुम मेरी दुनिया हो, मेरा सब कुछ"
             },
             bn: {
-                greeting: "হ্যালো, দেবদ্বতী! 💗",
+                greeting: "হ্যালো, ঐশ্বিকী! 💗",
                 message: "তুমি আমার সব কিছু"
             }
         };
@@ -185,13 +186,13 @@
 
         // Love Message Function
         function showLoveMessage() {
-            const messages = [
+            const loveMessages = [
                 "You mean the world to me!",
                 "Every moment with you is precious!",
                 "My love for you is endless!",
                 "You are my happiness!"
             ];
-            alert(messages[Math.floor(Math.random() * messages.length)]);
+            alert(loveMessages[Math.floor(Math.random() * loveMessages.length)]);
         }
     </script>
 </body>
